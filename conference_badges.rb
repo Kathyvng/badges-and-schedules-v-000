@@ -1,10 +1,22 @@
-def conference_badges(name, attendees, badges, room_assignments)
-  name = "Arel"
-  attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-  badges = "Hello, my name is #{attendees}."
-  room_assignments.each do |number|
-    number = 0
-    puts "Hello, #{attendees}! You'll be assigned to room #{number}!"
-    number += 1
-  end 
+def badge_maker(name)
+  "Hello, my name is #{name}."
+end
+
+def batch_badge_creator(array)
+  new_badge_creator = []
+    array.each do |names|
+      new_badge_creator << "Hello, my name is #{names}."
+end
+    new_badge_creator
+end
+
+def assign_rooms(attendees)
+  attendees.each_with_index.map do |name, index|
+    "Hello, #{name}! You'll be assigned to room #{index+1}!"
+  end
+end
+
+def printer(attendees)
+  batch_badge_creator(attendees).each { |badges| puts badges }
+  assign_rooms(attendees).each { |rooms| puts rooms }
 end
