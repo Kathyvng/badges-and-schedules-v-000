@@ -1,4 +1,5 @@
-def conference_badges
+def conference_badges(name, attendees, badges)
+  name = "Arel"
   attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-  puts "Hello, my name is #{attendees}."
+  badges = "Hello, my name is #{attendees}."
 end
